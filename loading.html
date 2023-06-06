@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Loading</title>
+</head>
+<style>
+    body {
+        padding: 100;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    h1 {
+        color: yellow;
+        border-bottom: 16px solid yellow;
+    }
+
+    h1::before {
+        content: 'LOADING...';
+        position: absolute;
+        color: cyan;
+        border-bottom: 16px solid cyan;
+        overflow: hidden;
+        display: flex;
+        animation: load 5s linear infinite;
+    }
+
+    @keyframes load {
+        0% {
+            width: 0px;
+        }
+
+        100% {
+            width: 175px;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>
+        LOADING...
+    </h1>
+</body>
+
+</html>
